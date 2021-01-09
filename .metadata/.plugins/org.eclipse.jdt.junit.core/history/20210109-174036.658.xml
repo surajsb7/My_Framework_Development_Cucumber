@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="Automation_Practice" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="StepDef.TestRunner" time="33.768">
+    <testsuite name="Automation Practice Application User Story" time="33.768">
+      <testcase name="1. User is able to Sign up in the application" classname="Automation Practice Application User Story" time="33.768"/>
+    </testsuite>
+  </testsuite>
+</testrun>

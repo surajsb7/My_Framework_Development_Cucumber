@@ -1,0 +1,110 @@
+package StepDef;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.*;
+
+public class Step_Def {
+
+	WebDriver driver;
+	String Base_Url = "http://automationpractice.com/";
+	int Wait_Time_Second = 20;
+
+	@Before
+	public void Set_Up() {
+		
+		System.setProperty("webdriver.chrome.driver", "Browser\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Wait_Time_Second, TimeUnit.SECONDS);
+	}
+	
+	@Given("User opened browser")
+	@Deprecated
+	public void User_opened_browser() {
+
+		System.setProperty("webdriver.chrome.driver", "Browser\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Wait_Time_Second, TimeUnit.SECONDS);
+	}
+
+	@Test
+	@Given("User navigates to the application url")
+	public void user_navigates_to_the_application_url() {
+
+		driver.get(Base_Url);
+		String expected = "http://automationpractice.com/index.php";
+		String actual = driver.getCurrentUrl();
+		Assert.assertEquals("Page URL validation", expected, actual);
+	}
+
+	@Given("User clicks on Sign in link at the top right corner of the application")
+	public void user_clicks_on_sign_in_link_at_the_top_right_corner_of_the_application() {
+
+		WebElement clklogin = driver.findElement(By.xpath("//a[@class='login']"));
+		clklogin.click();
+	}
+
+	@When("User enters valid email address and click on create an account button")
+	public void user_enters_valid_email_address_and_click_on_create_an_account_button() {
+		
+		WebElement signup = driver.findElement(By.id("email_create"));
+		signup.sendKeys("surajbobade786@gmail.com");
+		
+		WebElement submit = driver.findElement(By.xpath("//button[@id='SubmitCreate']"));
+		submit.click();
+	}
+	
+	@When("User fill the sign up form")
+	public void User_fill_the_sign_up_form() {
+		
+		driver.findElement(By.id("uniform-id_gender1")).click();
+		driver.findElement(By.id("customer_firstname")).sendKeys("Suraj");
+		driver.findElement(By.id("customer_lastname")).sendKeys("Bobade");
+		driver.findElement(By.id("passwd")).sendKeys("Mydec@1234");
+		Select date= new Select(driver.findElement(By.id("days")));
+		date.selectByValue("15");
+		Select month= new Select(driver.findElement(By.id("months")));
+		month.selectByValue("8");
+		Select year= new Select(driver.findElement(By.id("years")));
+		year.selectByValue("1947");
+		driver.findElement(By.id("company")).sendKeys("Testing Company");
+		driver.findElement(By.id("address1")).sendKeys("Ravi Nagar Wani");
+		driver.findElement(By.id("city")).sendKeys("Wani");
+		Select state= new Select(driver.findElement(By.id("id_state")));
+		state.selectByValue("1");
+		driver.findElement(By.id("postcode")).sendKeys("35226");
+		Select country= new Select(driver.findElement(By.id("id_country")));
+		country.selectByValue("21");
+		driver.findElement(By.id("other")).sendKeys("1234567899");
+		driver.findElement(By.id("phone")).sendKeys("1122334455");
+		driver.findElement(By.id("phone_mobile")).sendKeys("7676333444");
+		driver.findElement(By.id("alias")).sendKeys("Address is confirmed");
+		
+	}
+
+	@Then("User is sign up successfully")
+	public void user_is_sign_up_successfully() {
+		System.out.println("test5");
+	}
+	
+	@After
+	public void Clean_Up() {
+		
+		driver.quit();
+	}
+
+}

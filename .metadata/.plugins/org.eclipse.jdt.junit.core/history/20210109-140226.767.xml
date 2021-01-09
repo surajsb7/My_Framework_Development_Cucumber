@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="Automation_Practice" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="StepDef.TestRunner" time="13.421">
+    <testsuite name="Automation Practice Application User Story" time="13.421">
+      <testcase name="1. User is able to Sign up in the application" classname="Automation Practice Application User Story" time="13.421">
+        <failure>
+          <expected>http://automationpractice.com/</expected>
+          <actual>http://automationpractice.com/index.php</actual>org.junit.ComparisonFailure: Page URL validation expected:&lt;...omationpractice.com/[]&gt; but was:&lt;...omationpractice.com/[index.php]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at StepDef.Step_Def.user_navigates_to_the_application_url(Step_Def.java:28)&#13;
+	at ✽.User navigates to the application url(classpath:features/Sign_Up.feature:5)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="Automation_Practice" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="StepDef.TestRunner" time="0.081">
+    <testsuite name="Automation Practice Application User Story" time="0.081">
+      <testcase name="1. User is able to Sign up in the application" classname="Automation Practice Application User Story" time="0.081">
+        <error>io.cucumber.java.InvalidMethodException: You're not allowed to extend classes that define Step Definitions or hooks. class StepDef.Step_Def extends class Base.TestBase&#13;
+	at io.cucumber.java.InvalidMethodException.createInvalidMethodException(InvalidMethodException.java:16)&#13;
+	at io.cucumber.java.MethodScanner.validateMethod(MethodScanner.java:58)&#13;
+	at io.cucumber.java.MethodScanner.scan(MethodScanner.java:48)&#13;
+	at io.cucumber.java.MethodScanner.scan(MethodScanner.java:40)&#13;
+	at io.cucumber.java.MethodScanner.scan(MethodScanner.java:25)&#13;
+	at io.cucumber.java.JavaBackend.lambda$loadGlue$2(JavaBackend.java:40)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source)&#13;
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$7$1.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)&#13;
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source)&#13;
+	at io.cucumber.java.JavaBackend.loadGlue(JavaBackend.java:40)&#13;
+	at io.cucumber.core.runner.Runner.&lt;init&gt;(Runner.java:52)&#13;
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:51)&#13;
+	at java.lang.ThreadLocal$SuppliedThreadLocal.initialValue(Unknown Source)&#13;
+	at java.lang.ThreadLocal.setInitialValue(Unknown Source)&#13;
+	at java.lang.ThreadLocal.get(Unknown Source)&#13;
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:43)&#13;
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)&#13;
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)&#13;
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)&#13;
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

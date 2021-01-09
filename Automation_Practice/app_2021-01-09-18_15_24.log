@@ -1,0 +1,2 @@
+2021-Jan-09 18:15:40 PM [main] INFO  StepDef.Step_Def - Page Url validation successfull. Expected and actual text matched. Text: http://automationpractice.com/index.php
+2021-Jan-09 18:15:40 PM [main] INFO  StepDef.Step_Def - <User is navigates to the application url>

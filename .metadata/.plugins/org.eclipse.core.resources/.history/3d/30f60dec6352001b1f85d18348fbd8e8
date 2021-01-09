@@ -1,0 +1,15 @@
+package Base;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestBase {
+
+	protected WebDriver driver;
+	protected String Base_Url = "http://automationpractice.com/";
+	protected int Wait_Time_Second = 20;
+	
+	public void Clean_Up() {
+		
+		driver.quit();
+	}
+}

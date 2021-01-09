@@ -1,0 +1,41 @@
+package StepDef;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class Step_Def {
+
+	WebDriver driver;
+	String Base_Url = "http://automationpractice.com/";
+	int Wait_Time_Second = 20;
+
+	@Given("User navigates to the application url")
+	public void user_navigates_to_the_application_url() {
+		//System.out.println("test1");
+		//System.setProperty("webdriver.chrome.driver", "Browser\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Wait_Time_Second, TimeUnit.SECONDS);
+	}
+
+	@Given("User clicks on Sign in link at the top right corner of the application")
+	public void user_clicks_on_sign_in_link_at_the_top_right_corner_of_the_application() {
+		System.out.println("test2");
+	}
+
+	@When("User enters email address and click on create an account button")
+	public void user_enters_email_address_and_click_on_create_an_account_button() {
+		System.out.println("test3");
+	}
+
+	@Then("User is sign up successfully")
+	public void user_is_sign_up_successfully() {
+		System.out.println("test4");
+	}
+
+}
